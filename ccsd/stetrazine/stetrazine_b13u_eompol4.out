@@ -1,0 +1,1528 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.3 (devel), Q-Chem, Inc., Pleasanton, CA (2020)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Alam,  B. Albrecht,  
+ E. Alguire,  S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  
+ E. J. Berquist,  K. B. Bravaya,  H. Burton,  K. Carter-Fenk,  D. Casanova,  
+ Chun-Min Chang,  Yunqing Chen,  A. Chien,  K. D. Closser,  M. P. Coons,  
+ S. Coriani,  S. Dasgupta,  A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  
+ R. G. Edgar,  Po-Tung Fang,  S. Faraji,  S. Fatehi,  Qingguo Feng,  
+ J. Fosso-Tande,  J. Gayvert,  Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  
+ J. Gomes,  J. Gonthier,  A. Gunina,  D. Hait,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  J. E. Herr,  
+ E. G. Hohenstein,  Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  T.-C. Jagau,  
+ Hyunjun Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,  
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,  
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,  
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,  
+ Kuan-Yu Liu,  E. Livshits,  M. Loipersberger,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  P. Morgante,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ J. A. Parkhill,  S. K. Paul,  F. Pavosevic,  Zheng Pei,  T. M. Perrine,  
+ F. Plasser,  P. Pokhilko,  S. Prager,  A. Prociuk,  E. Ramos,  B. Rana,  
+ D. R. Rehn,  F. Rob,  M. Scheurer,  M. Schneider,  N. Sergueev,  
+ S. M. Sharada,  S. Sharma,  D. W. Small,  T. Stauch,  C. J. Stein,  
+ T. Stein,  Yu-Chuan Su,  S. P. Veccham,  Zhen Tao,  A. J. W. Thom,  
+ A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  L. Vogt,  M. L. Vidal,  
+ O. Vydrov,  M. A. Watson,  J. Wenzel,  M. de Wergifosse,  T. A. Wesolowski,  
+ A. White,  J. Witte,  A. Yamada,  Jun Yang,  K. Yao,  S. Yeganeh,  
+ S. R. Yost,  Zhi-Qiang You,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yan Zhao,  Ying Zhu,  B. R. Brooks,  G. K. L. Chan,  C. J. Cramer,  
+ M. S. Gordon,  W. J. Hehre,  A. Klamt,  M. W. Schmidt,  C. D. Sherrill,  
+ D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,  
+ Jeng-Da Chai,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  
+ D. S. Lambrecht,  WanZhen Liang,  C. Ochsenfeld,  V. A. Rassolov,  
+ L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  J. M. Herbert,  
+ A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.3.0 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.800.1 (Horizon Scraper).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Tue Mar 31 13:36:24 2020  
+
+Host: 
+0
+
+     Scratch files written to /lscratch/mscheure/stetrazine_b13u_eompol4_344782.Meister/qchem11355//
+Processing $rem in /export/home/mscheure/data/qchem_ccman2_pe/qchem/config/preferences:
+Processing $rem in /export/home/mscheure/.qchemrc:
+Core orbitals will be frozen
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+ 0 1
+N	-0.6583000000	-1.1581100000	0.0000000000
+C	-1.3082000000	0.0000000000	0.0000000000
+N	-0.6583000000	1.1581100000	0.0000000000
+N	0.6583000000	1.1581100000	0.0000000000
+C	1.3082000000	0.0000000000	0.0000000000
+N	0.6583000000	-1.1581100000	0.0000000000
+H	2.3829000000	0.0000000000	0.0000000000
+H	-2.3829000000	0.0000000000	0.0000000000
+$end
+
+$rem
+   METHOD            ccsd
+   BASIS             gen
+   PURECART 1
+   CC_REF_PROP       true
+   CC_EOM_PROP       true
+   CC_POL            4 ! EV
+   EOM_POL           4 ! EV
+   CC_FULLRESPONSE   false ! Kaushik
+   EE_SINGLETS       [0,0,0,0,0,1,1,1]
+   !sym_ignore        true
+   symmetry         false
+   !cc_symmetry false
+   mem_total 100000
+   mem_static 2000
+   threads 12
+$end
+
+$basis
+H     0
+S   4   1.00
+     33.685014                .006068
+      5.094788                .045316
+      1.158786                .202846
+      0.325840                .503709
+S   1   1.00
+      0.102741               1.00000
+S   1   1.00
+      0.032400               1.00000
+P   2   1.00
+      1.1588                  .188440
+      0.3258                  .882420
+P   2   1.00
+      0.1027                  .117800
+      0.0324                  .004200
+****
+C     0
+S   5   1.00
+   5240.6353                  .000937
+    782.20480                 .007228
+    178.35083                 .036344
+     50.815942                .130600
+     16.823562                .318931
+S   2   1.00
+      6.175776                .438742
+      2.418049                .214974
+S   1   1.00
+      0.511900               1.
+S   1   1.00
+      0.156590               1.
+S   1   1.00
+      0.047900               1.
+P   4   1.00
+     18.841800                .013887
+      4.159240                .086279
+      1.206710                .288744
+      0.385540                .499411
+P   1   1.00
+      0.121940               1.
+P   1   1.00
+      0.038568               1.
+D   2   1.00
+      1.206710                .262852
+      0.385540                .804300
+D   2   1.00
+      0.121940                .653500
+      0.038658                .863600
+****
+N     0
+S   5   1.00
+   8104.0716                  .000802
+   1216.0215                  .006174
+    277.23428                 .031233
+     76.904023                .115198
+     25.874419                .296951
+S   2   1.00
+      9.346767                .447349
+      3.579794                .245003
+S   1   1.00
+      0.739610               1.
+S   1   1.00
+      0.222617               1.
+S   1   1.00
+      0.067006               1.
+P   4   1.00
+     26.868987                .014478
+      5.991227                .091156
+      1.750842                .297420
+      0.560511                .493796
+P   1   1.00
+      0.175948               1.
+P   1   1.00
+      0.055231               1.
+D   2   1.00
+      1.750842                .224774
+      0.560511                .659562
+D   2   1.00
+      0.175948                .871355
+      0.055231                .704217
+****
+O     0
+S   5   1.00
+  10662.285                   .000799
+   1599.7097                  .006153
+    364.72526                 .031157
+    103.65179                 .115596
+     33.905805                .301552
+S   2   1.00
+     12.287469                .444870
+      4.756805                .243172
+S   1   1.00
+      1.004271               1.
+S   1   1.00
+      0.300686               1.
+S   1   1.00
+      0.09003                1.
+P   4   1.00
+     34.856463                .015648
+      7.843131                .098197
+      2.306249                .307768
+      0.723164                .492470
+P   1   1.00
+      0.214882               1.
+P   1   1.00
+      0.06385                1.
+D   2   1.00
+      2.3062                  .20270
+      0.7232                  .5791
+D   2   1.00
+      0.2149                  .78545
+      0.0639                  .53387
+****
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      N      -0.6583000000    -1.1581100000    -0.0000000000
+    2      C      -1.3082000000     0.0000000000     0.0000000000
+    3      N      -0.6583000000     1.1581100000     0.0000000000
+    4      N       0.6583000000     1.1581100000     0.0000000000
+    5      C       1.3082000000    -0.0000000000    -0.0000000000
+    6      N       0.6583000000    -1.1581100000    -0.0000000000
+    7      H       2.3829000000    -0.0000000000    -0.0000000000
+    8      H      -2.3829000000     0.0000000000     0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D2h   NOp =  8
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =         213.84907634 hartrees
+ There are       21 alpha and       21 beta electrons
+ Requested basis set is non-standard
+ There are 70 shells and 162 basis functions
+ Total memory of 100000 MB is distributed as follows: 
+   MEM_STATIC is set to 2000 MB
+   QALLOC/CCMAN JOB total memory use is  98000 MB
+ Warning: actual memory use might exceed 100000 MB
+
+ Total QAlloc Memory Limit 100000 MB
+ Mega-Array Size      1956 MB
+ MEM_STATIC part      2000 MB
+
+                       Distance Matrix (Angstroms)
+             N (  1)   C (  2)   N (  3)   N (  4)   C (  5)   N (  6)
+   C (  2)  1.328002
+   N (  3)  2.316220  1.328002
+   N (  4)  2.664265  2.282179  1.316600
+   C (  5)  2.282179  2.616400  2.282179  1.328002
+   N (  6)  1.316600  2.282179  2.664265  2.316220  1.328002
+   H (  7)  3.254246  3.691100  3.254246  2.077369  1.074700  2.077369
+   H (  8)  2.077369  1.074700  2.077369  3.254246  3.691100  3.254246
+             H (  7)
+   H (  8)  4.765800
+ 
+ A cutoff of  1.0D-14 yielded   2448 shell pairs
+ There are     13352 function pairs (     15434 Cartesian)
+ Smallest overlap matrix eigenvalue = 7.29E-06
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000043 hartrees
+ Guess MOs from core Hamiltonian diagonalization
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ using 12 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 2.0, May 2017, Q-Chem Inc. Pleasanton 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1    -262.2503717694      1.01e-01  
+    2    -224.5323215487      8.01e-02  
+    3    -285.7141441145      4.72e-02  
+    4    -293.4296439333      1.94e-02  
+    5    -294.5339814287      5.65e-03  
+    6    -294.6536339029      8.93e-04  
+    7    -294.6596462813      3.42e-04  
+    8    -294.6605712699      1.22e-04  
+    9    -294.6606876288      2.18e-05  
+   10    -294.6606922641      4.78e-06  
+   11    -294.6606924145      6.76e-07  
+   12    -294.6606924175      1.18e-07  
+   13    -294.6606924176      3.05e-08  
+   14    -294.6606924176      2.45e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 189.79s  wall 16.00s 
+ SCF   energy in the final basis set =     -294.6606924176
+ Total energy in the final basis set =     -294.6606924176
+
+
+ ------------------------------------------------------------------------------
+
+   CCMAN2: suite of methods based on coupled cluster
+           and equation of motion theories.
+
+   Components:
+   * libvmm-1.3-trunk
+     by Evgeny Epifanovsky, Ilya Kaliman.
+   * libtensor-2.5-trunk
+     by Evgeny Epifanovsky, Michael Wormit, Dmitry Zuev, Sam Manzer, 
+        Ilya Kaliman.
+   * libcc-2.5-trunk
+     by Evgeny Epifanovsky, Arik Landau, Tomasz Kus, Kirill Khistyaev, 
+        Dmitry Zuev, Prashant Manohar, Xintian Feng, Anna Krylov, 
+        Matthew Goldey, Alec White, Thomas Jagau, Kaushik Nanda, 
+        Anastasia Gunina, Alexander Kunitsa, Joonho Lee.
+
+   CCMAN original authors:
+   Anna I. Krylov, C. David Sherrill, Steven R. Gwaltney,
+   Edward F. C. Byrd (2000)
+   Sergey V. Levchenko, Lyudmila V. Slipchenko, Tao Wang,
+   Ana-Maria C. Cristian (2003)
+   Piotr A. Pieniazek, C. Melania Oana, Evgeny Epifanovsky (2007)
+   Prashant Manohar (2009)
+
+ ------------------------------------------------------------------------------
+
+
+ Allocating and initializing 98000MB of RAM...
+ Calculation will run on 12 cores.
+
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-15.657 -15.657 -15.656 -15.656 -11.346 -11.346  -1.445  -1.331
+  1 B2u   1 Ag    1 B1g   1 B3u   2 B3u   2 Ag    3 Ag    2 B2u                
+ -1.203  -1.024  -0.967  -0.797  -0.757  -0.716  -0.649  -0.557
+  3 B3u   2 B1g   4 Ag    3 B2u   5 Ag    4 B3u   1 B1u   4 B2u                
+ -0.539  -0.527  -0.493  -0.440  -0.405
+  6 Ag    5 B3u   1 B3g   1 B2g   3 B1g                                        
+ -- Virtual --                   
+  0.031   0.035   0.040   0.060   0.081   0.085   0.092   0.093
+  1 Au    7 Ag    6 B3u   2 B1u   5 B2u   4 B1g   8 Ag    3 B1u                
+  0.095   0.121   0.123   0.137   0.151   0.152   0.156   0.190
+  2 B2g   7 B3u   9 Ag    6 B2u   2 B3g   8 B3u  10 Ag    4 B1u                
+  0.198   0.202   0.217   0.227   0.228   0.246   0.268   0.269
+  9 B3u   5 B1g   2 Au    7 B2u   6 B1g   5 B1u   8 B2u  11 Ag                 
+  0.272   0.272   0.274   0.276   0.304   0.308   0.315   0.318
+ 10 B3u   3 B2g   4 B2g  12 Ag    7 B1g  13 Ag    3 B3g  14 Ag                 
+  0.327   0.344   0.345   0.373   0.380   0.389   0.408   0.414
+ 11 B3u   9 B2u  12 B3u   6 B1u   5 B2g   8 B1g  10 B2u   7 B1u                
+  0.415   0.418   0.448   0.477   0.487   0.489   0.494   0.517
+  3 Au   15 Ag    9 B1g  13 B3u   6 B2g  14 B3u  16 Ag   10 B1g                
+  0.535   0.540   0.593   0.613   0.613   0.625   0.640   0.654
+ 15 B3u  17 Ag   11 B2u   4 B3g  12 B2u  16 B3u   5 B3g  18 Ag                 
+  0.668   0.688   0.690   0.711   0.718   0.721   0.729   0.732
+ 17 B3u  11 B1g  19 Ag   20 Ag   13 B2u   7 B2g   8 B1u  18 B3u                
+  0.754   0.764   0.798   0.802   0.809   0.862   0.864   0.878
+  9 B1u   4 Au   12 B1g   8 B2g  14 B2u  19 B3u  13 B1g   5 Au                 
+  0.921   0.967   0.973   0.999   1.021   1.022   1.063   1.103
+ 21 Ag    6 B3g  20 B3u  10 B1u  14 B1g   9 B2g  21 B3u  22 Ag                 
+  1.112   1.153   1.156   1.169   1.173   1.194   1.225   1.266
+ 10 B2g  11 B1u  15 B2u   6 Au   23 Ag   22 B3u  15 B1g  24 Ag                 
+  1.352   1.370   1.381   1.405   1.408   1.418   1.451   1.553
+ 16 B2u  16 B1g  17 B2u  23 B3u   7 B3g  25 Ag   11 B2g  12 B1u                
+  1.572   1.584   1.585   1.626   1.651   1.658   1.745   1.746
+ 17 B1g  24 B3u  18 B2u  26 Ag    7 Au   18 B1g  19 B2u  12 B2g                
+  1.780   1.835   1.836   1.879   1.886   1.954   1.998   2.090
+ 25 B3u  13 B1u   8 B3g  27 Ag   26 B3u  28 Ag   20 B2u  29 Ag                 
+  2.181   2.250   2.307   2.327   2.340   2.370   2.448   2.495
+ 27 B3u  21 B2u  28 B3u  14 B1u  19 B1g   9 B3g   8 Au   29 B3u                
+  2.501   2.526   2.608   2.649   2.758   2.827   2.839   2.999
+ 30 Ag   20 B1g  22 B2u  13 B2g  14 B2g  31 Ag   21 B1g  23 B2u                
+  3.014   3.150   3.183   3.266   3.305   3.450   4.056  22.863
+  9 Au   30 B3u  32 Ag   31 B3u  22 B1g  23 B1g  32 B3u  33 Ag                 
+ 23.098  33.683  33.857  34.420  34.565
+ 33 B3u  34 Ag   24 B2u  34 B3u  24 B1g                                        
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-15.657 -15.657 -15.656 -15.656 -11.346 -11.346  -1.445  -1.331
+  1 B2u   1 Ag    1 B1g   1 B3u   2 B3u   2 Ag    3 Ag    2 B2u                
+ -1.203  -1.024  -0.967  -0.797  -0.757  -0.716  -0.649  -0.557
+  3 B3u   2 B1g   4 Ag    3 B2u   5 Ag    4 B3u   1 B1u   4 B2u                
+ -0.539  -0.527  -0.493  -0.440  -0.405
+  6 Ag    5 B3u   1 B3g   1 B2g   3 B1g                                        
+ -- Virtual --                   
+  0.031   0.035   0.040   0.060   0.081   0.085   0.092   0.093
+  1 Au    7 Ag    6 B3u   2 B1u   5 B2u   4 B1g   8 Ag    3 B1u                
+  0.095   0.121   0.123   0.137   0.151   0.152   0.156   0.190
+  2 B2g   7 B3u   9 Ag    6 B2u   2 B3g   8 B3u  10 Ag    4 B1u                
+  0.198   0.202   0.217   0.227   0.228   0.246   0.268   0.269
+  9 B3u   5 B1g   2 Au    7 B2u   6 B1g   5 B1u   8 B2u  11 Ag                 
+  0.272   0.272   0.274   0.276   0.304   0.308   0.315   0.318
+ 10 B3u   3 B2g   4 B2g  12 Ag    7 B1g  13 Ag    3 B3g  14 Ag                 
+  0.327   0.344   0.345   0.373   0.380   0.389   0.408   0.414
+ 11 B3u   9 B2u  12 B3u   6 B1u   5 B2g   8 B1g  10 B2u   7 B1u                
+  0.415   0.418   0.448   0.477   0.487   0.489   0.494   0.517
+  3 Au   15 Ag    9 B1g  13 B3u   6 B2g  14 B3u  16 Ag   10 B1g                
+  0.535   0.540   0.593   0.613   0.613   0.625   0.640   0.654
+ 15 B3u  17 Ag   11 B2u   4 B3g  12 B2u  16 B3u   5 B3g  18 Ag                 
+  0.668   0.688   0.690   0.711   0.718   0.721   0.729   0.732
+ 17 B3u  11 B1g  19 Ag   20 Ag   13 B2u   7 B2g   8 B1u  18 B3u                
+  0.754   0.764   0.798   0.802   0.809   0.862   0.864   0.878
+  9 B1u   4 Au   12 B1g   8 B2g  14 B2u  19 B3u  13 B1g   5 Au                 
+  0.921   0.967   0.973   0.999   1.021   1.022   1.063   1.103
+ 21 Ag    6 B3g  20 B3u  10 B1u  14 B1g   9 B2g  21 B3u  22 Ag                 
+  1.112   1.153   1.156   1.169   1.173   1.194   1.225   1.266
+ 10 B2g  11 B1u  15 B2u   6 Au   23 Ag   22 B3u  15 B1g  24 Ag                 
+  1.352   1.370   1.381   1.405   1.408   1.418   1.451   1.553
+ 16 B2u  16 B1g  17 B2u  23 B3u   7 B3g  25 Ag   11 B2g  12 B1u                
+  1.572   1.584   1.585   1.626   1.651   1.658   1.745   1.746
+ 17 B1g  24 B3u  18 B2u  26 Ag    7 Au   18 B1g  19 B2u  12 B2g                
+  1.780   1.835   1.836   1.879   1.886   1.954   1.998   2.090
+ 25 B3u  13 B1u   8 B3g  27 Ag   26 B3u  28 Ag   20 B2u  29 Ag                 
+  2.181   2.250   2.307   2.327   2.340   2.370   2.448   2.495
+ 27 B3u  21 B2u  28 B3u  14 B1u  19 B1g   9 B3g   8 Au   29 B3u                
+  2.501   2.526   2.608   2.649   2.758   2.827   2.839   2.999
+ 30 Ag   20 B1g  22 B2u  13 B2g  14 B2g  31 Ag   21 B1g  23 B2u                
+  3.014   3.150   3.183   3.266   3.305   3.450   4.056  22.863
+  9 Au   30 B3u  32 Ag   31 B3u  22 B1g  23 B1g  32 B3u  33 Ag                 
+ 23.098  33.683  33.857  34.420  34.565
+ 33 B3u  34 Ag   24 B2u  34 B3u  24 B1g                                        
+
+ Occupation and symmetry of molecular orbitals
+
+ Point group: D2h (8 irreducible representations).
+
+                           Ag   B1g  B2g  B3g  Au   B1u  B2u  B3u   All 
+ ------------------------------------------------------------------------
+ All molecular orbitals:
+  - Alpha                  34   24   14   9    9    14   24   34    162 
+  - Beta                   34   24   14   9    9    14   24   34    162 
+ ------------------------------------------------------------------------
+ Alpha orbitals:
+  - Frozen occupied        2    1    0    0    0    0    1    2     6   
+  - Active occupied        4    2    1    1    0    1    3    3     15  
+  - Active virtual         28   21   13   8    9    13   20   29    141 
+  - Frozen virtual         0    0    0    0    0    0    0    0     0   
+ ------------------------------------------------------------------------
+ Beta orbitals:
+  - Frozen occupied        2    1    0    0    0    0    1    2     6   
+  - Active occupied        4    2    1    1    0    1    3    3     15  
+  - Active virtual         28   21   13   8    9    13   20   29    141 
+  - Frozen virtual         0    0    0    0    0    0    0    0     0   
+ ------------------------------------------------------------------------
+
+ Import integrals:   CPU 0.00 s  wall 0.00 s
+
+ Import integrals:   CPU 63.27 s  wall 6.82 s
+
+ MP2 amplitudes:   CPU 7.38 s  wall 6.59 s
+
+Running a double precision version
+           CCSD T amplitudes will be solved using DIIS.
+
+           Start     Size      MaxIter   EConv     TConv     
+           3         7         100       1.00e-06  1.00e-04  
+ ------------------------------------------------------------------------------
+           Energy (a.u.)   Ediff      Tdiff       Comment
+ ------------------------------------------------------------------------------
+          -295.59227005                           
+     1    -295.56478564   2.75e-02   9.24e-01     
+     2    -295.60033685   3.56e-02   1.43e-01     
+     3    -295.59810368   2.23e-03   5.63e-02     
+     4    -295.60155285   3.45e-03   1.65e-02     Switched to DIIS steps.
+     5    -295.60282566   1.27e-03   1.35e-02     
+     6    -295.60287989   5.42e-05   2.33e-03     
+     7    -295.60286822   1.17e-05   1.16e-03     
+     8    -295.60286774   4.75e-07   2.06e-04     
+     9    -295.60286807   3.22e-07   8.97e-05     
+ ------------------------------------------------------------------------------
+          -295.60286807                           CCSD T converged.
+
+End of double precision
+ SCF energy                 = -294.66069242
+ MP2 energy                 = -295.59227005
+ CCSD correlation energy    =   -0.94217565
+ CCSD total energy          = -295.60286807
+
+ CCSD  T1^2 = 0.0102  T2^2 = 0.3506  Leading amplitudes:
+
+ Amplitude    Orbitals with energies
+ -0.0225       1 (B3g) A                 ->    6 (B3g) A                  
+              -0.4935                          0.9665                     
+ -0.0225       1 (B3g) B                 ->    6 (B3g) B                  
+              -0.4935                          0.9665                     
+ -0.0189       3 (B1g) A                 ->    8 (B1g) A                  
+              -0.4051                          0.3888                     
+ -0.0189       3 (B1g) B                 ->    8 (B1g) B                  
+              -0.4051                          0.3888                     
+
+ Amplitude    Orbitals with energies
+ -0.0913       1 (B3g) A     1 (B3g) B   ->    1 (Au) A      1 (Au) B     
+              -0.4935       -0.4935            0.0307        0.0307       
+  0.0913       1 (B3g) A     1 (B3g) B   ->    1 (Au) B      1 (Au) A     
+              -0.4935       -0.4935            0.0307        0.0307       
+  0.0913       1 (B3g) B     1 (B3g) A   ->    1 (Au) A      1 (Au) B     
+              -0.4935       -0.4935            0.0307        0.0307       
+ -0.0913       1 (B3g) B     1 (B3g) A   ->    1 (Au) B      1 (Au) A     
+              -0.4935       -0.4935            0.0307        0.0307       
+
+ Computing CCSD intermediates for later calculations in double precision
+ Finished.
+
+Running a double precision version
+           CCSD Lambda amplitudes will be solved using DIIS.
+           Start     Size      MaxIter   EConv     LConv     
+           3         7         100       1.00e-06  1.00e-04  
+ ------------------------------------------------------------------------------
+            Enorm      Ldiff       Comment
+ ------------------------------------------------------------------------------
+     1     6.21e-02   5.01e-02     
+     2     1.23e-02   4.12e-04     
+     3     4.64e-03   2.73e-03     
+     4     1.87e-03   2.25e-04     Switched to DIIS steps.
+     5     5.52e-04   5.29e-04     
+     6     2.30e-04   1.00e-04     
+     7     7.31e-05   2.90e-05     
+     8     2.92e-05   4.77e-06     
+     9     1.01e-05   5.13e-07     
+    10     3.93e-06   1.72e-07     
+    11     1.41e-06   1.59e-07     
+    12     5.42e-07   9.36e-08     
+ ------------------------------------------------------------------------------
+                                   CCSD Lambda converged.
+
+ Computing density matrices in double precision...
+ Computing density matrices... Done.
+ Reference state properties
+ Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
+ R-squared (a.u.): 370.220819 (XX 177.758382, YY 167.622774, ZZ 24.839664)
+ Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
+ Angular momentum (a.u.) against gauge origin: 
+ (X 0.000000i, Y 0.000000i, Z 0.000000i)
+ Traces of the OPDMs: Tr(AA) 21.000000, Tr(BB) 21.000000
+ Density matrix was written to a file for further analysis.
+           CCSD Polarizability response will be solved using DIIS.
+           Start     Size      MaxIter   EConv     XConv     
+           3         7         100       1.00e-06  1.00e-06  
+Performing DIIS for the x-component of dZdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     1.51e+00   1.18e+00     
+     2     9.49e-01   8.94e-01     
+     3     5.16e-01   4.56e-01     
+     4     1.57e-01   6.10e-01     Switched to DIIS steps.
+     5     6.61e-02   9.89e-02     
+     6     1.45e-02   4.64e-02     
+     7     4.16e-03   4.86e-03     
+     8     1.84e-03   7.83e-04     
+     9     5.35e-04   2.44e-04     
+    10     2.50e-04   7.78e-07     
+    11     7.21e-05   1.72e-05     
+    12     2.89e-05   7.54e-06     
+    13     8.10e-06   3.08e-06     
+    14     3.83e-06   9.56e-07     
+    15     1.73e-06   1.37e-06     
+    16     8.55e-07   9.14e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability X-amplitude response conv
+Performing DIIS for the y-component of dZdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     1.40e+00   1.05e+00     
+     2     9.22e-01   8.57e-01     
+     3     5.27e-01   4.53e-01     
+     4     1.90e-01   6.55e-01     Switched to DIIS steps.
+     5     9.11e-02   1.45e-01     
+     6     3.39e-02   8.28e-02     
+     7     1.30e-02   1.90e-02     
+     8     6.14e-03   4.75e-03     
+     9     1.70e-03   1.84e-03     
+    10     7.09e-04   1.78e-04     
+    11     1.92e-04   2.80e-06     
+    12     7.38e-05   5.83e-06     
+    13     2.63e-05   6.02e-06     
+    14     1.50e-05   4.47e-06     
+    15     7.65e-06   7.16e-06     
+    16     4.61e-06   4.77e-06     
+    17     2.57e-06   3.23e-06     
+    18     1.24e-06   2.01e-06     
+    19     5.41e-07   7.49e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability X-amplitude response conv
+Performing DIIS for the z-component of dZdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     9.52e-01   7.62e-01     
+     2     5.57e-01   4.71e-01     
+     3     3.65e-01   2.72e-01     
+     4     2.10e-01   4.07e-01     Switched to DIIS steps.
+     5     1.43e-01   2.41e-01     
+     6     7.42e-02   3.07e-01     
+     7     2.39e-02   2.36e-01     
+     8     1.03e-02   4.67e-02     
+     9     4.12e-03   1.17e-02     
+    10     1.77e-03   1.51e-03     
+    11     5.30e-04   3.21e-04     
+    12     2.16e-04   9.05e-05     
+    13     9.46e-05   2.70e-05     
+    14     6.26e-05   2.61e-05     
+    15     5.07e-05   2.70e-05     
+    16     3.53e-05   5.92e-05     
+    17     2.16e-05   7.34e-05     
+    18     8.85e-06   6.92e-05     
+    19     4.23e-06   2.36e-05     
+    20     1.61e-06   8.13e-06     
+    21     8.70e-07   6.79e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability X-amplitude response conv
+
+Static polarizability with expectation-value approach using left response vectors
+
+ Polarizability Tensor ALPHA_IJ, I,J=X,Y,Z (a.u.):
+ ------------------------------------------------------------------------------
+         63.59224395    0.00000000    0.00000000
+          0.00000000   56.18332849    0.00000000
+          0.00000000    0.00000000   33.55148259
+ ------------------------------------------------------------------------------
+ Isotropic polarizability: 1/3 * (a_xx + a_yy + a_zz)
+ Isotropic polarizability in a.u. = 51.10901834
+ Anisotropic polarizability: SQRT(0.5*((a_xx-a_yy)^2 + (a_yy-a_zz)^2 + (a_zz-a_xx)^2))
+ Anisotropic polarizability in a.u. = 27.10663960
+ ------------------------------------------------------------------------------
+
+ CCSD calculation:   CPU 941.46 s  wall 152.95 s
+
+        Solving for EOMEE-CCSD B1u singlet states.
+
+Running a double precision version
+        EOMEE-CCSD/MP2 right amplitudes will be solved using Davidson.
+        Amplitudes will be solved using standard  algorithm.
+     Hard-coded thresholds: 
+     LinDepThresh=1.00e-15  NormThresh=1.00e-06  ReorthogonThresh=1.00e-02
+
+      Roots     MaxVec    MaxIter   Precond   Conv      Shift    
+      1         120       60        1         1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      1     1.18e-01   12.5700   
+      1    0      2     6.82e-02   10.6330   
+      2    0      3     1.17e-02   9.9678   
+      3    0      4     2.35e-03   9.7899   
+      4    0      5     1.43e-03   9.7309   
+      5    0      6     2.27e-02   9.6452   
+      6    0      7     1.16e-01   3.9694   
+      7    0      8     7.95e-03   2.5040   
+      8    0      9     1.44e-03   2.4181   
+      9    0      10    2.56e-04   2.3938   
+      10   0      11    5.80e-05   2.3891   
+      11   1      12    8.46e-06   2.3878*  
+
+     Davidson procedure converged
+
+ EOMEE transition 1/B1u
+ Total energy = -295.51511902 a.u.  Excitation energy = 2.3878 eV.
+ R0^2 = 0.0000  R1^2 = 0.9141  R2^2 = 0.0859  Res^2 = 8.46e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+  0.6659       3 (B1g) A                 ->    1 (Au) A                   
+  0.6659       3 (B1g) B                 ->    1 (Au) B                   
+  0.0887       3 (B1g) A                 ->    2 (Au) A                   
+  0.0887       3 (B1g) B                 ->    2 (Au) B                   
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               21      Occ  Alpha       3 (B1g)     -0.4051
+               21      Occ  Beta        3 (B1g)     -0.4051
+               22      Vir  Alpha       1 (Au)      0.0307
+               40      Vir  Alpha       2 (Au)      0.2166
+               22      Vir  Beta        1 (Au)      0.0307
+               40      Vir  Beta        2 (Au)      0.2166
+
+
+Running a double precision version
+      EOM-CCSD/MP2 left amplitudes will be solved using Davidson.
+        Amplitudes will be solved using MOM  algorithm.
+     Hard-coded thresholds: 
+     LinDepThresh=1.00e-15  NormThresh=1.00e-06  ReorthogonThresh=1.00e-02
+
+      Roots     MaxVec    MaxIter   Precond   Conv      Shift    
+      1         120       60        1         1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      1     1.16e-02   2.3878   
+      1    0      2     4.92e-03   2.3879   
+      2    0      3     4.99e-04   2.3878   
+      3    0      4     2.64e-05   2.3877   
+      4    1      5     4.19e-06   2.3877*  
+
+     Davidson procedure converged
+
+ Excited state properties for  EOMEE-CCSD transition 1/B1u
+ Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
+ R-squared (a.u.): 368.254383 (XX 177.060511, YY 165.412658, ZZ 25.781214)
+ Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
+ Angular momentum (a.u.) against gauge origin: 
+ (X 0.000000i, Y 0.000000i, Z 0.000000i)
+ Traces of the OPDMs: Tr(AA) 21.000000, Tr(BB) 21.000000
+
+           EOM Polarizability response will be solved using DIIS.
+           Start     Size      MaxIter   EConv     XConv     
+           3         7         100       1.00e-06  1.00e-06  
+Performing DIIS for the x-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     1.41e+00   1.32e+00     
+     2     8.99e-01   8.40e-01     
+     3     6.06e-01   5.34e-01     
+     4     2.96e-01   9.64e-01     Switched to DIIS steps.
+     5     1.81e-01   3.78e-01     
+     6     8.63e-02   3.96e-01     
+     7     3.15e-02   1.73e-01     
+     8     1.52e-02   4.54e-02     
+     9     5.77e-03   1.45e-02     
+    10     3.18e-03   2.15e-03     
+    11     1.26e-03   4.28e-04     
+    12     7.99e-04   4.00e-04     
+    13     4.80e-04   1.49e-04     
+    14     3.25e-04   3.87e-05     
+    15     1.76e-04   1.29e-04     
+    16     9.52e-05   2.00e-04     
+    17     6.05e-05   1.41e-04     
+    18     2.37e-05   1.52e-04     
+    19     1.16e-05   3.70e-05     
+    20     6.07e-06   1.18e-05     
+    21     2.68e-06   8.33e-06     
+    22     1.25e-06   7.27e-07     
+    23     5.30e-07   5.62e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+Performing DIIS for the y-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     1.68e+00   1.44e+00     
+     2     1.40e+00   1.31e+00     
+     3     1.05e+00   9.42e-01     
+     4     6.65e-01   2.28e+00     Switched to DIIS steps.
+     5     4.23e-01   1.34e+00     
+     6     1.48e-01   1.78e+00     
+     7     6.55e-02   2.79e-01     
+     8     3.54e-02   1.64e-01     
+     9     1.49e-02   8.36e-03     
+    10     8.51e-03   3.85e-03     
+    11     2.94e-03   5.31e-03     
+    12     1.31e-03   2.24e-03     
+    13     4.73e-04   1.71e-04     
+    14     2.60e-04   3.39e-04     
+    15     1.36e-04   1.78e-04     
+    16     7.94e-05   6.49e-05     
+    17     4.79e-05   5.05e-05     
+    18     2.53e-05   5.76e-05     
+    19     1.57e-05   2.83e-05     
+    20     8.26e-06   2.87e-05     
+    21     4.55e-06   1.44e-05     
+    22     2.59e-06   1.13e-05     
+    23     1.36e-06   6.51e-06     
+    24     6.53e-07   3.73e-06     
+    25     2.67e-07   1.47e-06     
+    26     1.13e-07   5.54e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+Performing DIIS for the z-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     9.96e-01   7.93e-01     
+     2     5.11e-01   4.21e-01     
+     3     2.92e-01   2.23e-01     
+     4     9.50e-02   2.75e-01     Switched to DIIS steps.
+     5     5.13e-02   5.64e-02     
+     6     2.29e-02   3.10e-02     
+     7     8.13e-03   1.15e-02     
+     8     4.00e-03   2.57e-03     
+     9     1.69e-03   5.75e-04     
+    10     8.15e-04   2.69e-04     
+    11     2.48e-04   5.27e-05     
+    12     1.28e-04   2.10e-05     
+    13     5.54e-05   7.03e-06     
+    14     2.69e-05   1.68e-05     
+    15     1.39e-05   1.30e-05     
+    16     5.20e-06   7.78e-06     
+    17     2.38e-06   1.88e-06     
+    18     1.15e-06   5.77e-07     
+    19     4.47e-07   1.95e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+
+Static polarizability with expectation-value approach using left response vectors
+
+ Polarizability Tensor ALPHA_IJ, I,J=X,Y,Z (a.u.):
+ ------------------------------------------------------------------------------
+         49.28476179   -0.00000000    0.00000000
+         -0.00000000   71.74879176    0.00000000
+          0.00000000    0.00000000   23.04879930
+ ------------------------------------------------------------------------------
+ Isotropic polarizability: 1/3 * (a_xx + a_yy + a_zz)
+ Isotropic polarizability in a.u. = 48.02745095
+ Anisotropic polarizability: SQRT(0.5*((a_xx-a_yy)^2 + (a_yy-a_zz)^2 + (a_zz-a_xx)^2))
+ Anisotropic polarizability in a.u. = 42.21757712
+ ------------------------------------------------------------------------------
+        Solving for EOMEE-CCSD B2u singlet states.
+
+Running a double precision version
+        EOMEE-CCSD/MP2 right amplitudes will be solved using Davidson.
+        Amplitudes will be solved using standard  algorithm.
+     Hard-coded thresholds: 
+     LinDepThresh=1.00e-15  NormThresh=1.00e-06  ReorthogonThresh=1.00e-02
+
+      Roots     MaxVec    MaxIter   Precond   Conv      Shift    
+      1         120       60        1         1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      1     1.94e-01   11.1187   
+      1    0      2     1.38e-01   7.9463   
+      2    0      3     1.23e-02   7.0921   
+      3    0      4     2.00e-03   6.9141   
+      4    0      5     3.04e-03   6.8487   
+      5    0      6     4.63e-04   6.8158   
+      6    0      7     4.38e-05   6.8133   
+      7    0      8     2.35e-05   6.8131   
+      8    0      9     7.62e-05   6.8122   
+      9    0      10    4.07e-02   6.4072   
+      10   0      11    1.34e-02   5.7973   
+      11   0      12    3.21e-03   5.6082   
+      12   0      13    6.22e-04   5.5790   
+      13   0      14    1.56e-04   5.5673   
+      14   0      15    4.46e-05   5.5652   
+      15   0      16    1.39e-05   5.5655   
+      16   1      17    3.15e-06   5.5646*  
+
+     Davidson procedure converged
+
+ EOMEE transition 1/B2u
+ Total energy = -295.39837190 a.u.  Excitation energy = 5.5646 eV.
+ R0^2 = 0.0000  R1^2 = 0.8912  R2^2 = 0.1088  Res^2 = 3.15e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.5747       1 (B2g) A                 ->    1 (Au) A                   
+ -0.5747       1 (B2g) B                 ->    1 (Au) B                   
+ -0.2376       1 (B3g) A                 ->    2 (B1u) A                  
+ -0.2376       1 (B3g) B                 ->    2 (B1u) B                  
+  0.2021       1 (B3g) A                 ->    3 (B1u) A                  
+  0.2021       1 (B3g) B                 ->    3 (B1u) B                  
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               20      Occ  Alpha       1 (B2g)     -0.4395
+               19      Occ  Alpha       1 (B3g)     -0.4935
+               20      Occ  Beta        1 (B2g)     -0.4395
+               19      Occ  Beta        1 (B3g)     -0.4935
+               22      Vir  Alpha       1 (Au)      0.0307
+               25      Vir  Alpha       2 (B1u)      0.0601
+               29      Vir  Alpha       3 (B1u)      0.0927
+               22      Vir  Beta        1 (Au)      0.0307
+               25      Vir  Beta        2 (B1u)      0.0601
+               29      Vir  Beta        3 (B1u)      0.0927
+
+
+Running a double precision version
+      EOM-CCSD/MP2 left amplitudes will be solved using Davidson.
+        Amplitudes will be solved using MOM  algorithm.
+     Hard-coded thresholds: 
+     LinDepThresh=1.00e-15  NormThresh=1.00e-06  ReorthogonThresh=1.00e-02
+
+      Roots     MaxVec    MaxIter   Precond   Conv      Shift    
+      1         120       60        1         1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      1     1.04e-02   5.5646   
+      1    0      2     5.38e-03   5.5648   
+      2    0      3     6.23e-04   5.5648   
+      3    0      4     2.63e-05   5.5647   
+      4    0      5     1.11e-05   5.5647   
+      5    1      6     2.04e-06   5.5647*  
+
+     Davidson procedure converged
+
+ Excited state properties for  EOMEE-CCSD transition 1/B2u
+ Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
+ R-squared (a.u.): 370.266238 (XX 177.147962, YY 168.368870, ZZ 24.749406)
+ Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
+ Angular momentum (a.u.) against gauge origin: 
+ (X 0.000000i, Y 0.000000i, Z 0.000000i)
+ Traces of the OPDMs: Tr(AA) 21.000000, Tr(BB) 21.000000
+
+           EOM Polarizability response will be solved using DIIS.
+           Start     Size      MaxIter   EConv     XConv     
+           3         7         100       1.00e-06  1.00e-06  
+Performing DIIS for the x-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     1.28e+00   1.19e+00     
+     2     7.70e-01   7.24e-01     
+     3     4.76e-01   4.24e-01     
+     4     1.84e-01   6.41e-01     Switched to DIIS steps.
+     5     1.10e-01   1.66e-01     
+     6     7.05e-02   1.22e-01     
+     7     4.92e-02   5.40e-02     
+     8     4.07e-02   5.07e-02     
+     9     3.34e-02   2.58e-02     
+    10     2.88e-02   2.79e-02     
+    11     1.88e-02   5.15e-02     
+    12     1.21e-02   4.23e-02     
+    13     6.10e-03   3.82e-02     
+    14     3.96e-03   5.49e-03     
+    15     2.71e-03   5.24e-03     
+    16     1.89e-03   7.08e-04     
+    17     1.16e-03   8.58e-04     
+    18     6.07e-04   1.47e-04     
+    19     4.13e-04   1.51e-04     
+    20     3.04e-04   3.23e-04     
+    21     2.17e-04   6.64e-04     
+    22     9.29e-05   8.78e-04     
+    23     4.99e-05   3.29e-04     
+    24     2.59e-05   1.17e-04     
+    25     1.32e-05   7.51e-05     
+    26     6.49e-06   1.24e-05     
+    27     2.84e-06   1.09e-05     
+    28     1.68e-06   7.85e-06     
+    29     1.05e-06   3.92e-07     
+    30     5.80e-07   1.28e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+Performing DIIS for the y-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     1.26e+00   1.07e+00     
+     2     7.37e-01   6.51e-01     
+     3     4.51e-01   3.80e-01     
+     4     1.47e-01   5.65e-01     Switched to DIIS steps.
+     5     7.57e-02   1.32e-01     
+     6     3.84e-02   6.14e-02     
+     7     1.93e-02   2.11e-02     
+     8     1.16e-02   1.22e-02     
+     9     6.59e-03   1.61e-03     
+    10     4.04e-03   1.54e-03     
+    11     1.69e-03   1.99e-04     
+    12     8.38e-04   2.54e-04     
+    13     4.20e-04   1.61e-04     
+    14     2.18e-04   1.87e-04     
+    15     1.16e-04   7.78e-05     
+    16     6.91e-05   2.15e-05     
+    17     3.65e-05   2.19e-06     
+    18     2.09e-05   1.66e-09     
+    19     1.24e-05   8.02e-07     
+    20     7.44e-06   1.54e-06     
+    21     4.01e-06   7.69e-08     
+    22     1.76e-06   7.56e-07     
+    23     1.15e-06   4.27e-07     
+    24     5.36e-07   4.70e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+Performing DIIS for the z-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     9.41e-01   8.77e-01     
+     2     5.33e-01   4.77e-01     
+     3     3.42e-01   2.78e-01     
+     4     1.80e-01   4.16e-01     Switched to DIIS steps.
+     5     1.42e-01   1.80e-01     
+     6     1.39e-01   1.49e-01     
+     7     1.35e-01   6.28e-02     
+     8     1.37e-01   2.19e-01     
+     9     1.37e-01   1.60e-01     
+    10     1.35e-01   3.18e-02     
+    11     1.22e-01   8.85e-02     
+    12     8.48e-02   3.56e-01     
+    13     4.48e-02   1.14e+00     
+    14     2.91e-02   4.56e-01     
+    15     1.85e-02   2.53e-01     
+    16     1.27e-02   1.85e-01     
+    17     8.30e-03   8.00e-02     
+    18     4.58e-03   9.31e-02     
+    19     2.38e-03   4.70e-02     
+    20     1.22e-03   2.83e-02     
+    21     7.56e-04   1.64e-02     
+    22     4.11e-04   8.08e-03     
+    23     1.80e-04   1.81e-03     
+    24     7.56e-05   1.23e-03     
+    25     3.86e-05   5.76e-04     
+    26     1.84e-05   3.11e-04     
+    27     9.72e-06   1.87e-05     
+    28     5.86e-06   8.47e-05     
+    29     2.82e-06   5.93e-05     
+    30     1.60e-06   1.62e-07     
+    31     1.00e-06   1.27e-05     
+    32     7.30e-07   3.83e-06     
+    33     5.30e-07   4.58e-06     
+    34     3.81e-07   3.97e-06     
+    35     2.74e-07   3.17e-06     
+    36     2.03e-07   8.70e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+
+Static polarizability with expectation-value approach using left response vectors
+
+ Polarizability Tensor ALPHA_IJ, I,J=X,Y,Z (a.u.):
+ ------------------------------------------------------------------------------
+         43.36892992    0.00000000   -0.00000000
+          0.00000000   35.02022485    0.00000000
+         -0.00000000    0.00000000   25.16645966
+ ------------------------------------------------------------------------------
+ Isotropic polarizability: 1/3 * (a_xx + a_yy + a_zz)
+ Isotropic polarizability in a.u. = 34.51853815
+ Anisotropic polarizability: SQRT(0.5*((a_xx-a_yy)^2 + (a_yy-a_zz)^2 + (a_zz-a_xx)^2))
+ Anisotropic polarizability in a.u. = 15.78175352
+ ------------------------------------------------------------------------------
+        Solving for EOMEE-CCSD B3u singlet states.
+
+Running a double precision version
+        EOMEE-CCSD/MP2 right amplitudes will be solved using Davidson.
+        Amplitudes will be solved using standard  algorithm.
+     Hard-coded thresholds: 
+     LinDepThresh=1.00e-15  NormThresh=1.00e-06  ReorthogonThresh=1.00e-02
+
+      Roots     MaxVec    MaxIter   Precond   Conv      Shift    
+      1         120       60        1         1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      1     1.96e-01   11.6700   
+      1    0      2     1.79e-01   8.5192   
+      2    0      3     1.50e-02   7.6515   
+      3    0      4     1.80e-03   7.5015   
+      4    0      5     2.44e-03   7.4536   
+      5    0      6     1.84e-03   7.4172   
+      6    0      7     1.12e-03   7.3906   
+      7    0      8     1.07e-03   7.3644   
+      8    0      9     7.21e-04   7.3423   
+      9    0      10    2.84e-04   7.3295   
+      10   0      11    2.72e-04   7.3245   
+      11   0      12    1.53e-04   7.3205   
+      12   0      13    3.82e-05   7.3182   
+      13   0      14    1.28e-05   7.3177   
+      14   0      15    1.07e-05   7.3175   
+      15   1      16    5.53e-06   7.3172*  
+
+     Davidson procedure converged
+
+ EOMEE transition 1/B3u
+ Total energy = -295.33396584 a.u.  Excitation energy = 7.3172 eV.
+ R0^2 = 0.0000  R1^2 = 0.9251  R2^2 = 0.0749  Res^2 = 5.53e-06
+ Conv-d = yes
+
+ Amplitude    Transitions between orbitals
+ -0.5449       3 (B1g) A                 ->    5 (B2u) A                  
+ -0.5449       3 (B1g) B                 ->    5 (B2u) B                  
+  0.2620       1 (B3g) A                 ->    1 (Au) A                   
+  0.2620       1 (B3g) B                 ->    1 (Au) B                   
+ -0.1524       1 (B2g) A                 ->    2 (B1u) A                  
+ -0.1524       1 (B2g) B                 ->    2 (B1u) B                  
+  0.1252       1 (B2g) A                 ->    3 (B1u) A                  
+  0.1252       1 (B2g) B                 ->    3 (B1u) B                  
+  0.1107       3 (B1g) A                 ->    6 (B2u) A                  
+  0.1107       3 (B1g) B                 ->    6 (B2u) B                  
+ -0.1051       5 (B3u) A                 ->    7 (Ag) A                   
+ -0.1051       5 (B3u) B                 ->    7 (Ag) B                   
+  0.1019       3 (B1g) A                 ->    8 (B2u) A                  
+  0.1019       3 (B1g) B                 ->    8 (B2u) B                  
+
+              Summary of significant orbitals:
+
+               Number  Type             Irrep      Energy
+               21      Occ  Alpha       3 (B1g)     -0.4051
+               20      Occ  Alpha       1 (B2g)     -0.4395
+               19      Occ  Alpha       1 (B3g)     -0.4935
+               18      Occ  Alpha       5 (B3u)     -0.5270
+               21      Occ  Beta        3 (B1g)     -0.4051
+               20      Occ  Beta        1 (B2g)     -0.4395
+               19      Occ  Beta        1 (B3g)     -0.4935
+               18      Occ  Beta        5 (B3u)     -0.5270
+               23      Vir  Alpha       7 (Ag)      0.0350
+               22      Vir  Alpha       1 (Au)      0.0307
+               25      Vir  Alpha       2 (B1u)      0.0601
+               29      Vir  Alpha       3 (B1u)      0.0927
+               26      Vir  Alpha       5 (B2u)      0.0812
+               33      Vir  Alpha       6 (B2u)      0.1374
+               44      Vir  Alpha       8 (B2u)      0.2677
+               23      Vir  Beta        7 (Ag)      0.0350
+               22      Vir  Beta        1 (Au)      0.0307
+               25      Vir  Beta        2 (B1u)      0.0601
+               29      Vir  Beta        3 (B1u)      0.0927
+               26      Vir  Beta        5 (B2u)      0.0812
+               33      Vir  Beta        6 (B2u)      0.1374
+               44      Vir  Beta        8 (B2u)      0.2677
+
+
+Running a double precision version
+      EOM-CCSD/MP2 left amplitudes will be solved using Davidson.
+        Amplitudes will be solved using MOM  algorithm.
+     Hard-coded thresholds: 
+     LinDepThresh=1.00e-15  NormThresh=1.00e-06  ReorthogonThresh=1.00e-02
+
+      Roots     MaxVec    MaxIter   Precond   Conv      Shift    
+      1         120       60        1         1.00e-05  0.00e+00  
+ ------------------------------------------------------------------------------
+      Iter ConvRoots NVecs ResNorm Current eigenvalues (eV)
+ ------------------------------------------------------------------------------
+      0    0      1     8.90e-03   7.3172   
+      1    0      2     7.61e-03   7.3171   
+      2    0      3     5.34e-04   7.3171   
+      3    0      4     2.93e-05   7.3171   
+      4    0      5     1.59e-05   7.3171   
+      5    1      6     7.12e-06   7.3171*  
+
+     Davidson procedure converged
+
+ Excited state properties for  EOMEE-CCSD transition 1/B3u
+ Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
+ R-squared (a.u.): 400.811911 (XX 185.003598, YY 182.816281, ZZ 32.992033)
+ Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
+ Angular momentum (a.u.) against gauge origin: 
+ (X 0.000000i, Y 0.000000i, Z 0.000000i)
+ Traces of the OPDMs: Tr(AA) 21.000000, Tr(BB) 21.000000
+
+           EOM Polarizability response will be solved using DIIS.
+           Start     Size      MaxIter   EConv     XConv     
+           3         7         100       1.00e-06  1.00e-06  
+Performing DIIS for the x-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     5.86e+00   5.33e+00     
+     2     6.43e+00   6.32e+00     
+     3     5.63e+00   5.49e+00     
+     4     4.99e+00   2.65e+01     Switched to DIIS steps.
+     5     3.74e+00   2.30e+01     
+     6     2.62e+00   3.41e+01     
+     7     1.89e+00   1.87e+01     
+     8     9.17e-01   3.25e+01     
+     9     4.25e-01   1.24e+01     
+    10     2.70e-01   1.39e+00     
+    11     1.38e-01   2.56e+00     
+    12     8.42e-02   4.99e-02     
+    13     5.42e-02   1.60e-01     
+    14     3.88e-02   1.02e-01     
+    15     2.06e-02   8.07e-03     
+    16     1.31e-02   6.31e-02     
+    17     8.38e-03   3.05e-02     
+    18     5.68e-03   2.50e-02     
+    19     3.95e-03   2.23e-03     
+    20     2.73e-03   5.50e-03     
+    21     1.58e-03   7.07e-03     
+    22     9.37e-04   8.67e-04     
+    23     5.35e-04   3.30e-03     
+    24     2.77e-04   2.90e-03     
+    25     1.43e-04   1.53e-03     
+    26     1.22e-04   4.86e-04     
+    27     1.02e-04   4.96e-04     
+    28     7.40e-05   1.00e-03     
+    29     4.60e-05   8.27e-04     
+    30     2.25e-05   6.82e-04     
+    31     1.52e-05   5.71e-05     
+    32     8.53e-06   1.60e-04     
+    33     6.44e-06   2.40e-05     
+    34     3.98e-06   4.03e-05     
+    35     2.51e-06   5.10e-06     
+    36     1.06e-06   6.16e-06     
+    37     6.22e-07   5.41e-06     
+    38     3.80e-07   2.64e-06     
+    39     2.65e-07   9.54e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+Performing DIIS for the y-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     8.28e+00   7.59e+00     
+     2     9.78e+00   9.60e+00     
+     3     9.57e+00   9.29e+00     
+     4     1.09e+01   1.68e+01     Switched to DIIS steps.
+     5     9.03e+00   4.04e+01     
+     6     5.22e+00   2.76e+01     
+     7     3.11e+00   2.28e+01     
+     8     2.07e+00   1.20e+01     
+     9     1.48e+00   7.86e+00     
+    10     1.31e+00   3.10e+00     
+    11     1.25e+00   1.72e+00     
+    12     1.15e+00   1.70e+00     
+    13     1.15e+00   5.29e-02     
+    14     1.14e+00   9.75e-01     
+    15     1.13e+00   2.22e-01     
+    16     1.16e+00   8.60e-02     
+    17     1.12e+00   8.33e-01     
+    18     1.11e+00   6.63e-01     
+    19     1.05e+00   4.00e+00     
+    20     8.45e-01   2.24e+01     
+    21     6.38e-01   3.37e+01     
+    22     4.68e-01   1.90e+01     
+    23     1.97e-01   2.92e+01     
+    24     1.46e-01   3.60e+00     
+    25     1.04e-01   4.53e+00     
+    26     6.71e-02   3.07e+00     
+    27     5.06e-02   1.64e+00     
+    28     2.82e-02   2.05e-02     
+    29     1.99e-02   1.33e+00     
+    30     1.68e-02   6.87e-02     
+    31     1.48e-02   2.89e-01     
+    32     1.33e-02   2.24e-01     
+    33     1.17e-02   1.86e-01     
+    34     7.88e-03   1.09e-01     
+    35     6.15e-03   2.03e-01     
+    36     4.25e-03   1.77e-01     
+    37     3.03e-03   3.67e-03     
+    38     1.93e-03   1.57e-01     
+    39     1.51e-03   3.12e-02     
+    40     1.41e-03   1.23e-03     
+    41     1.39e-03   9.51e-03     
+    42     1.33e-03   2.47e-03     
+    43     1.28e-03   1.13e-02     
+    44     1.23e-03   2.14e-03     
+    45     1.41e-03   5.49e-03     
+    46     1.00e-03   4.92e-02     
+    47     8.28e-04   3.21e-02     
+    48     7.56e-04   1.14e-02     
+    49     7.31e-04   2.54e-02     
+    50     7.14e-04   3.60e-03     
+    51     7.09e-04   1.76e-03     
+    52     7.13e-04   8.04e-05     
+    53     7.01e-04   3.75e-03     
+    54     6.76e-04   1.43e-03     
+    55     5.97e-04   1.17e-02     
+    56     5.50e-04   1.16e-02     
+    57     4.64e-04   7.49e-03     
+    58     4.21e-04   7.81e-03     
+    59     3.99e-04   3.30e-03     
+    60     3.95e-04   1.19e-03     
+    61     3.91e-04   4.18e-03     
+    62     3.91e-04   1.12e-06     
+    63     3.94e-04   7.63e-04     
+    64     3.88e-04   4.51e-03     
+    65     3.91e-04   8.75e-04     
+    66     3.74e-04   3.71e-03     
+    67     3.40e-04   1.75e-03     
+    68     3.39e-04   7.28e-04     
+    69     3.38e-04   2.15e-03     
+    70     3.42e-04   1.46e-03     
+    71     3.39e-04   1.67e-03     
+    72     3.30e-04   7.44e-03     
+    73     3.13e-04   1.33e-03     
+    74     2.27e-04   6.87e-03     
+    75     1.04e-04   1.55e-02     
+    76     8.23e-05   2.11e-04     
+    77     6.73e-05   1.56e-05     
+    78     7.14e-05   6.70e-04     
+    79     6.75e-05   4.06e-04     
+    80     5.97e-05   1.24e-04     
+    81     5.22e-05   6.38e-04     
+    82     4.89e-05   4.13e-04     
+    83     4.72e-05   8.37e-04     
+    84     4.80e-05   1.44e-04     
+    85     4.36e-05   2.96e-04     
+    86     3.95e-05   6.77e-06     
+    87     3.70e-05   2.30e-04     
+    88     3.69e-05   1.15e-05     
+    89     3.70e-05   2.88e-05     
+    90     3.81e-05   1.26e-04     
+    91     3.56e-05   3.76e-04     
+    92     3.56e-05   9.65e-05     
+    93     3.69e-05   5.58e-05     
+    94     3.27e-05   1.54e-04     
+    95     2.97e-05   1.89e-04     
+    96     2.43e-05   2.73e-04     
+    97     2.51e-05   5.97e-05     
+    98     2.41e-05   9.35e-05     
+    99     2.42e-05   1.06e-05     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+Performing DIIS for the z-component of dLdy
+ ------------------------------------------------------------------------------
+            Enorm      Xdiff       Comment
+ ------------------------------------------------------------------------------
+     1     4.08e+00   3.77e+00     
+     2     3.98e+00   3.88e+00     
+     3     3.38e+00   3.29e+00     
+     4     1.73e+00   1.59e+01     Switched to DIIS steps.
+     5     7.90e-01   9.52e+00     
+     6     5.38e-01   2.74e+00     
+     7     5.59e-01   3.42e-01     
+     8     5.42e-01   2.95e-01     
+     9     3.88e-01   2.21e-01     
+    10     2.84e-01   2.20e-01     
+    11     2.19e-01   2.03e-01     
+    12     2.19e-01   1.49e-01     
+    13     2.20e-01   1.27e-02     
+    14     2.08e-01   2.57e-01     
+    15     1.99e-01   3.62e-02     
+    16     1.38e-01   7.03e-02     
+    17     9.52e-02   1.12e-01     
+    18     6.12e-02   2.12e-02     
+    19     4.04e-02   1.30e-03     
+    20     1.42e-02   6.49e-02     
+    21     7.44e-03   5.05e-02     
+    22     4.71e-03   2.14e-02     
+    23     2.10e-03   1.10e-02     
+    24     8.51e-04   2.45e-03     
+    25     3.31e-04   7.10e-04     
+    26     1.98e-04   5.16e-04     
+    27     7.02e-05   7.31e-04     
+    28     4.48e-05   1.14e-04     
+    29     3.01e-05   2.68e-05     
+    30     2.08e-05   5.19e-05     
+    31     1.64e-05   6.08e-06     
+    32     1.69e-05   1.20e-05     
+    33     1.70e-05   1.60e-06     
+    34     1.61e-05   1.63e-05     
+    35     1.57e-05   7.09e-06     
+    36     1.53e-05   8.10e-06     
+    37     1.41e-05   7.09e-06     
+    38     1.33e-05   9.02e-06     
+    39     1.32e-05   2.06e-06     
+    40     1.31e-05   3.30e-07     
+    41     1.13e-05   3.54e-06     
+    42     5.12e-06   3.76e-05     
+    43     3.23e-06   1.31e-05     
+    44     1.82e-06   2.94e-06     
+    45     9.90e-07   1.76e-06     
+    46     5.02e-07   1.14e-06     
+    47     2.99e-07   1.14e-07     
+ ------------------------------------------------------------------------------
+                                   Polarizability tX-amplitude response con
+
+Static polarizability with expectation-value approach using left response vectors
+
+ Polarizability Tensor ALPHA_IJ, I,J=X,Y,Z (a.u.):
+ ------------------------------------------------------------------------------
+       1110.08211918   -0.00000000   -0.00000000
+         -0.00000000  527.54010468   -0.00000000
+         -0.00000000   -0.00000000  270.70415737
+ ------------------------------------------------------------------------------
+ Isotropic polarizability: 1/3 * (a_xx + a_yy + a_zz)
+ Isotropic polarizability in a.u. = 636.10879374
+ Anisotropic polarizability: SQRT(0.5*((a_xx-a_yy)^2 + (a_yy-a_zz)^2 + (a_zz-a_xx)^2))
+ Anisotropic polarizability in a.u. = 744.94136187
+ ------------------------------------------------------------------------------
+ EOMEE-CCSD calculation:   CPU 11112.98 s  wall 1544.63 s
+
+ Total ccman2 time:   CPU 12162.04 s  wall 1715.51 s
+
+ 
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-15.657 -15.657 -15.656 -15.656 -11.346 -11.346  -1.445  -1.331
+  1 B2u   1 Ag    1 B1g   1 B3u   2 B3u   2 Ag    3 Ag    2 B2u                
+ -1.203  -1.024  -0.967  -0.797  -0.757  -0.716  -0.649  -0.557
+  3 B3u   2 B1g   4 Ag    3 B2u   5 Ag    4 B3u   1 B1u   4 B2u                
+ -0.539  -0.527  -0.493  -0.440  -0.405
+  6 Ag    5 B3u   1 B3g   1 B2g   3 B1g                                        
+ -- Virtual --                   
+  0.031   0.035   0.040   0.060   0.081   0.085   0.092   0.093
+  1 Au    7 Ag    6 B3u   2 B1u   5 B2u   4 B1g   8 Ag    3 B1u                
+  0.095   0.121   0.123   0.137   0.151   0.152   0.156   0.190
+  2 B2g   7 B3u   9 Ag    6 B2u   2 B3g   8 B3u  10 Ag    4 B1u                
+  0.198   0.202   0.217   0.227   0.228   0.246   0.268   0.269
+  9 B3u   5 B1g   2 Au    7 B2u   6 B1g   5 B1u   8 B2u  11 Ag                 
+  0.272   0.272   0.274   0.276   0.304   0.308   0.315   0.318
+ 10 B3u   3 B2g   4 B2g  12 Ag    7 B1g  13 Ag    3 B3g  14 Ag                 
+  0.327   0.344   0.345   0.373   0.380   0.389   0.408   0.414
+ 11 B3u   9 B2u  12 B3u   6 B1u   5 B2g   8 B1g  10 B2u   7 B1u                
+  0.415   0.418   0.448   0.477   0.487   0.489   0.494   0.517
+  3 Au   15 Ag    9 B1g  13 B3u   6 B2g  14 B3u  16 Ag   10 B1g                
+  0.535   0.540   0.593   0.613   0.613   0.625   0.640   0.654
+ 15 B3u  17 Ag   11 B2u   4 B3g  12 B2u  16 B3u   5 B3g  18 Ag                 
+  0.668   0.688   0.690   0.711   0.718   0.721   0.729   0.732
+ 17 B3u  11 B1g  19 Ag   20 Ag   13 B2u   7 B2g   8 B1u  18 B3u                
+  0.754   0.764   0.798   0.802   0.809   0.862   0.864   0.878
+  9 B1u   4 Au   12 B1g   8 B2g  14 B2u  19 B3u  13 B1g   5 Au                 
+  0.921   0.967   0.973   0.999   1.021   1.022   1.063   1.103
+ 21 Ag    6 B3g  20 B3u  10 B1u  14 B1g   9 B2g  21 B3u  22 Ag                 
+  1.112   1.153   1.156   1.169   1.173   1.194   1.225   1.266
+ 10 B2g  11 B1u  15 B2u   6 Au   23 Ag   22 B3u  15 B1g  24 Ag                 
+  1.352   1.370   1.381   1.405   1.408   1.418   1.451   1.553
+ 16 B2u  16 B1g  17 B2u  23 B3u   7 B3g  25 Ag   11 B2g  12 B1u                
+  1.572   1.584   1.585   1.626   1.651   1.658   1.745   1.746
+ 17 B1g  24 B3u  18 B2u  26 Ag    7 Au   18 B1g  19 B2u  12 B2g                
+  1.780   1.835   1.836   1.879   1.886   1.954   1.998   2.090
+ 25 B3u  13 B1u   8 B3g  27 Ag   26 B3u  28 Ag   20 B2u  29 Ag                 
+  2.181   2.250   2.307   2.327   2.340   2.370   2.448   2.495
+ 27 B3u  21 B2u  28 B3u  14 B1u  19 B1g   9 B3g   8 Au   29 B3u                
+  2.501   2.526   2.608   2.649   2.758   2.827   2.839   2.999
+ 30 Ag   20 B1g  22 B2u  13 B2g  14 B2g  31 Ag   21 B1g  23 B2u                
+  3.014   3.150   3.183   3.266   3.305   3.450   4.056  22.863
+  9 Au   30 B3u  32 Ag   31 B3u  22 B1g  23 B1g  32 B3u  33 Ag                 
+ 23.098  33.683  33.857  34.420  34.565
+ 33 B3u  34 Ag   24 B2u  34 B3u  24 B1g                                        
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-15.657 -15.657 -15.656 -15.656 -11.346 -11.346  -1.445  -1.331
+  1 B2u   1 Ag    1 B1g   1 B3u   2 B3u   2 Ag    3 Ag    2 B2u                
+ -1.203  -1.024  -0.967  -0.797  -0.757  -0.716  -0.649  -0.557
+  3 B3u   2 B1g   4 Ag    3 B2u   5 Ag    4 B3u   1 B1u   4 B2u                
+ -0.539  -0.527  -0.493  -0.440  -0.405
+  6 Ag    5 B3u   1 B3g   1 B2g   3 B1g                                        
+ -- Virtual --                   
+  0.031   0.035   0.040   0.060   0.081   0.085   0.092   0.093
+  1 Au    7 Ag    6 B3u   2 B1u   5 B2u   4 B1g   8 Ag    3 B1u                
+  0.095   0.121   0.123   0.137   0.151   0.152   0.156   0.190
+  2 B2g   7 B3u   9 Ag    6 B2u   2 B3g   8 B3u  10 Ag    4 B1u                
+  0.198   0.202   0.217   0.227   0.228   0.246   0.268   0.269
+  9 B3u   5 B1g   2 Au    7 B2u   6 B1g   5 B1u   8 B2u  11 Ag                 
+  0.272   0.272   0.274   0.276   0.304   0.308   0.315   0.318
+ 10 B3u   3 B2g   4 B2g  12 Ag    7 B1g  13 Ag    3 B3g  14 Ag                 
+  0.327   0.344   0.345   0.373   0.380   0.389   0.408   0.414
+ 11 B3u   9 B2u  12 B3u   6 B1u   5 B2g   8 B1g  10 B2u   7 B1u                
+  0.415   0.418   0.448   0.477   0.487   0.489   0.494   0.517
+  3 Au   15 Ag    9 B1g  13 B3u   6 B2g  14 B3u  16 Ag   10 B1g                
+  0.535   0.540   0.593   0.613   0.613   0.625   0.640   0.654
+ 15 B3u  17 Ag   11 B2u   4 B3g  12 B2u  16 B3u   5 B3g  18 Ag                 
+  0.668   0.688   0.690   0.711   0.718   0.721   0.729   0.732
+ 17 B3u  11 B1g  19 Ag   20 Ag   13 B2u   7 B2g   8 B1u  18 B3u                
+  0.754   0.764   0.798   0.802   0.809   0.862   0.864   0.878
+  9 B1u   4 Au   12 B1g   8 B2g  14 B2u  19 B3u  13 B1g   5 Au                 
+  0.921   0.967   0.973   0.999   1.021   1.022   1.063   1.103
+ 21 Ag    6 B3g  20 B3u  10 B1u  14 B1g   9 B2g  21 B3u  22 Ag                 
+  1.112   1.153   1.156   1.169   1.173   1.194   1.225   1.266
+ 10 B2g  11 B1u  15 B2u   6 Au   23 Ag   22 B3u  15 B1g  24 Ag                 
+  1.352   1.370   1.381   1.405   1.408   1.418   1.451   1.553
+ 16 B2u  16 B1g  17 B2u  23 B3u   7 B3g  25 Ag   11 B2g  12 B1u                
+  1.572   1.584   1.585   1.626   1.651   1.658   1.745   1.746
+ 17 B1g  24 B3u  18 B2u  26 Ag    7 Au   18 B1g  19 B2u  12 B2g                
+  1.780   1.835   1.836   1.879   1.886   1.954   1.998   2.090
+ 25 B3u  13 B1u   8 B3g  27 Ag   26 B3u  28 Ag   20 B2u  29 Ag                 
+  2.181   2.250   2.307   2.327   2.340   2.370   2.448   2.495
+ 27 B3u  21 B2u  28 B3u  14 B1u  19 B1g   9 B3g   8 Au   29 B3u                
+  2.501   2.526   2.608   2.649   2.758   2.827   2.839   2.999
+ 30 Ag   20 B1g  22 B2u  13 B2g  14 B2g  31 Ag   21 B1g  23 B2u                
+  3.014   3.150   3.183   3.266   3.305   3.450   4.056  22.863
+  9 Au   30 B3u  32 Ag   31 B3u  22 B1g  23 B1g  32 B3u  33 Ag                 
+ 23.098  33.683  33.857  34.420  34.565
+ 33 B3u  34 Ag   24 B2u  34 B3u  24 B1g                                        
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 N                    -0.558434
+      2 C                     1.302661
+      3 N                    -0.558434
+      4 N                    -0.558434
+      5 C                     1.302661
+      6 N                    -0.558434
+      7 H                    -0.185794
+      8 H                    -0.185794
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z       0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -27.6198     XY      -0.0000     YY     -45.0782
+        XZ       0.0000     YZ      -0.0000     ZZ     -33.4102
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY      -0.0000    XYY       0.0000
+       YYY       0.0000    XXZ      -0.0000    XYZ      -0.0000
+       YYZ       0.0000    XZZ       0.0000    YZZ      -0.0000
+       ZZZ       0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX    -191.6227   XXXY      -0.0000   XXYY     -92.6457
+      XYYY      -0.0000   YYYY    -261.2853   XXXZ      -0.0000
+      XXYZ      -0.0000   XYYZ       0.0000   YYYZ       0.0000
+      XXZZ     -47.1779   XYZZ       0.0000   YYZZ     -43.1914
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ     -33.5862
+ -----------------------------------------------------------------
+Archival summary:
+1\1\Knecht16\SP\ProcedureUnspecified\BasisUnspecified\422\mscheure\TueMar3114:06:052020TueMar3114:06:052020\0\\#,ProcedureUnspecified,BasisUnspecified,\\0,1\N\N,1,1.3166\C,2,1.328,1,119.3\H,3,1.0747,2,119.3,1,-180,0\N,3,1.328,2,121.4,1,0,0\N,5,1.3166,3,119.3,2,-0,0\C,6,1.328,5,119.3,3,0,0\H,7,1.0747,6,119.3,5,180,0\\HF=-294.660692\\@
+
+ Total job time:  1781.33s(wall), 12408.43s(cpu) 
+ Tue Mar 31 14:06:05 2020
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+

@@ -1,0 +1,23 @@
+$molecule
+ 0 1
+ O 0 0 0
+ H 0 0 1.795239827225189
+ H 1.693194615993441 0 -0.599043184453037
+$end
+
+$rem
+   METHOD            ccsd
+   BASIS             cc-pvdz
+   CC_REF_PROP       true
+   CC_EOM_PROP       true
+   CC_POL            true
+   EOM_POL           2
+   CC_FULLRESPONSE   true
+   EE_SINGLETS       2
+   sym_ignore        true
+   symmetry         false
+   cc_symmetry false
+   mem_total 4000
+   input_bohr = true
+   threads 4
+$end
