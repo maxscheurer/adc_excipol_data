@@ -1,2 +1,17 @@
 # adc_excipol_data
-Results for the manuscript on excited state polarizabilities with ADC/ISR
+Results of all calculations for the manuscript on excited state polarizabilities with ADC/ISR.
+
+## Description
+
+- `analysis.ipynb`: Jupyter notebook that processes all calculations, prints all paper tables and dumps the final `.csv` file
+- TBD
+
+
+## Requirements
+
+- `jupyter-lab`
+- `cclib` ([this](https://github.com/maxscheurer/cclib/tree/dev-qchem) branch is needed to parse results)
+- `numpy`, `scipy`
+- `matplotlib`, `seaborn`
+- `pandas`
+
