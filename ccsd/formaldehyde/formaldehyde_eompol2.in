@@ -1,0 +1,25 @@
+$molecule
+ 0 1
+C	0.0000000000	0.0000000000	0.5325493576
+H	0.9343700000	0.0000000000	1.1138904967
+H	-0.9343700000	0.0000000000	1.1138904967
+O	0.0000000000	0.0000000000	-0.6778846424
+$end
+
+$rem
+   METHOD            ccsd
+   BASIS aug-cc-pvdz
+   CC_REF_PROP       true
+   CC_EOM_PROP       true
+   CC_POL            2 ! EV
+   EOM_POL           2 ! EV
+   CC_FULLRESPONSE   true ! Kaushik
+   EE_SINGLETS       [0,0,1,0]
+   !sym_ignore        true
+   symmetry         false
+   !cc_symmetry false
+   mem_total 50000
+   mem_static 2000
+   threads 12
+$end
+

@@ -4,7 +4,7 @@ Results of all calculations for the manuscript on excited state polarizabilities
 ## Description
 
 - `analysis.ipynb`: Jupyter notebook that processes all calculations, prints all paper tables and dumps the final `.csv` file
-- TBD
+- `adc_excipol_results.csv`: CSV table with all computational results
 
 
 ## Requirements

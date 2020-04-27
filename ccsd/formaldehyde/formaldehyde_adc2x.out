@@ -1,0 +1,441 @@
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.3 (devel), Q-Chem, Inc., Pleasanton, CA (2020)
+
+ Yihan Shao,  Zhengting Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  Jia Deng,  Xintian Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  T. Kus,  A. Landau,  
+ Jie Liu,  E. I. Proynov,  R. M. Richard,  R. P. Steele,  E. J. Sundstrom,  
+ H. L. Woodcock III,  P. M. Zimmerman,  D. Zuev,  B. Alam,  B. Albrecht,  
+ E. Alguire,  S. A. Baeppler,  D. Barton,  Z. Benda,  Y. A. Bernard,  
+ E. J. Berquist,  K. B. Bravaya,  H. Burton,  K. Carter-Fenk,  D. Casanova,  
+ Chun-Min Chang,  Yunqing Chen,  A. Chien,  K. D. Closser,  M. P. Coons,  
+ S. Coriani,  S. Dasgupta,  A. L. Dempwolff,  M. Diedenhofen,  Hainam Do,  
+ R. G. Edgar,  Po-Tung Fang,  S. Faraji,  S. Fatehi,  Qingguo Feng,  
+ J. Fosso-Tande,  J. Gayvert,  Qinghui Ge,  A. Ghysels,  G. Gidofalvi,  
+ J. Gomes,  J. Gonthier,  A. Gunina,  D. Hait,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  J. E. Herr,  
+ E. G. Hohenstein,  Z. C. Holden,  Kerwin Hui,  B. C. Huynh,  T.-C. Jagau,  
+ Hyunjun Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  K. Koh,  
+ D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  A. Kunitsa,  
+ Ka Un Lao,  A. Laurent,  K. V. Lawler,  Joonho Lee,  D. Lefrancois,  
+ S. Lehtola,  D. S. Levine,  Yi-Pei Li,  You-Sheng Lin,  Fenglai Liu,  
+ Kuan-Yu Liu,  E. Livshits,  M. Loipersberger,  A. Luenser,  P. Manohar,  
+ E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  Yuezhi Mao,  N. Mardirossian,  
+ A. V. Marenich,  T. Markovich,  L. A. Martinez-Martinez,  S. A. Maurer,  
+ N. J. Mayhall,  S. C. McKenzie,  J.-M. Mewes,  P. Morgante,  A. F. Morrison,  
+ J. W. Mullinax,  K. Nanda,  T. S. Nguyen-Beck,  R. Olivares-Amaya,  
+ J. A. Parkhill,  S. K. Paul,  F. Pavosevic,  Zheng Pei,  T. M. Perrine,  
+ F. Plasser,  P. Pokhilko,  S. Prager,  A. Prociuk,  E. Ramos,  B. Rana,  
+ D. R. Rehn,  F. Rob,  M. Scheurer,  M. Schneider,  N. Sergueev,  
+ S. M. Sharada,  S. Sharma,  D. W. Small,  T. Stauch,  C. J. Stein,  
+ T. Stein,  Yu-Chuan Su,  S. P. Veccham,  Zhen Tao,  A. J. W. Thom,  
+ A. Tkatchenko,  T. Tsuchimochi,  N. M. Tubman,  L. Vogt,  M. L. Vidal,  
+ O. Vydrov,  M. A. Watson,  J. Wenzel,  M. de Wergifosse,  T. A. Wesolowski,  
+ A. White,  J. Witte,  A. Yamada,  Jun Yang,  K. Yao,  S. Yeganeh,  
+ S. R. Yost,  Zhi-Qiang You,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yan Zhao,  Ying Zhu,  B. R. Brooks,  G. K. L. Chan,  C. J. Cramer,  
+ M. S. Gordon,  W. J. Hehre,  A. Klamt,  M. W. Schmidt,  C. D. Sherrill,  
+ D. G. Truhlar,  A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,  
+ Jeng-Da Chai,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  Chao-Ping Hsu,  Yousung Jung,  Jing Kong,  
+ D. S. Lambrecht,  WanZhen Liang,  C. Ochsenfeld,  V. A. Rassolov,  
+ L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  J. M. Herbert,  
+ A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  J. Baker,  G. J. O. Beran,  K. Brandhorst,  
+ S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  L. Fusti-Molnar,  W. A. Goddard III,  
+ A. Golubeva-Zadorozhnaya,  S. R. Gwaltney,  G. Hawkins,  A. Heyden,  
+ S. Hirata,  G. Kedziora,  F. J. Keil,  C. Kelley,  Jihan Kim,  R. A. King,  
+ R. Z. Khaliullin,  P. P. Korambath,  W. Kurlancheek,  A. M. Lee,  M. S. Lee,  
+ S. V. Levchenko,  Ching Yeh Lin,  D. Liotard,  R. C. Lochan,  I. Lotan,  
+ P. E. Maslen,  N. Nair,  D. P. O'Neill,  D. Neuhauser,  E. Neuscamman,  
+ C. M. Oana,  R. Olson,  B. Peters,  R. Peverati,  P. A. Pieniazek,  
+ Y. M. Rhee,  J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  
+ H. F. Schaefer III,  N. E. Schultz,  N. Shenvi,  A. C. Simmonett,  A. Sodt,  
+ D. Stuck,  K. S. Thanthiriwatte,  V. Vanovschi,  Tao Wang,  A. Warshel,  
+ C. F. Williams,  Q. Wu,  X. Xu,  W. Zhang
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.3.0 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.800.1 (Horizon Scraper).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Mon Apr 20 09:31:00 2020  
+
+Host: 
+0
+
+     Scratch files written to /lscratch/mscheure/formaldehyde_adc2x_347665.Meister/qchem40495//
+Processing $rem in /export/home/mscheure/data/qchem_ccman2_pe/qchem/config/preferences:
+Processing $rem in /export/home/mscheure/.qchemrc:
+
+Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+ 0 1
+C	0.0000000000	0.0000000000	0.5325493576
+H	0.9343700000	0.0000000000	1.1138904967
+H	-0.9343700000	0.0000000000	1.1138904967
+O	0.0000000000	0.0000000000	-0.6778846424
+$end
+
+$rem
+   METHOD            adc(2)-x
+   BASIS aug-cc-pvdz
+   EE_SINGLETS       [0,0,1,0]
+   symmetry         false
+   mem_total 100000
+   mem_static 2000
+   threads 12
+$end
+
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.0000000000     0.0000000000     0.5325493576
+    2      H       0.9343700000     0.0000000000     1.1138904967
+    3      H      -0.9343700000     0.0000000000     1.1138904967
+    4      O       0.0000000000     0.0000000000    -0.6778846424
+ ----------------------------------------------------------------
+ Molecular Point Group                 C2v   NOp =  4
+ Largest Abelian Subgroup              C2v   NOp =  4
+ Nuclear Repulsion Energy =          31.22815576 hartrees
+ There are        8 alpha and        8 beta electrons
+ Requested basis set is aug-cc-pVDZ
+ There are 28 shells and 64 basis functions
+ Total memory of 100000 MB is distributed as follows: 
+   MEM_STATIC is set to 2000 MB
+   QALLOC/CCMAN JOB total memory use is  98000 MB
+ Warning: actual memory use might exceed 100000 MB
+
+ Total QAlloc Memory Limit 100000 MB
+ Mega-Array Size      1956 MB
+ MEM_STATIC part      2000 MB
+
+                       Distance Matrix (Angstroms)
+             C (  1)   H (  2)   H (  3)
+   H (  2)  1.100457
+   H (  3)  1.100457  1.868740
+   O (  4)  1.210434  2.020769  2.020769
+ 
+ A cutoff of  1.0D-11 yielded    406 shell pairs
+ There are      2150 function pairs (      2436 Cartesian)
+ Smallest overlap matrix eigenvalue = 7.65E-04
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =    -0.0000000008 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 16.000000 electrons
+ A restricted Hartree-Fock SCF calculation will be
+ performed using Pulay DIIS extrapolation
+ SCF converges when DIIS error is below 1.0E-08
+ using 12 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 2.0, May 2017, Q-Chem Inc. Pleasanton 
+ -------------------------------------------------------
+ ---------------------------------------
+  Cycle       Energy         DIIS Error
+ ---------------------------------------
+    1    -114.0743924688      7.32E-02
+    2    -113.8117214794      1.21E-02
+    3    -113.8458071263      1.01E-02
+    4    -113.8839209816      8.75E-04
+    5    -113.8846784047      3.38E-04
+    6    -113.8848103037      1.48E-04
+    7    -113.8848497878      4.93E-05
+    8    -113.8848524997      6.80E-06
+    9    -113.8848525554      9.03E-07
+   10    -113.8848525566      1.56E-07
+   11    -113.8848525566      2.56E-08
+   12    -113.8848525566      4.30E-09 Convergence criterion met
+ ---------------------------------------
+ SCF time:  CPU 5.00 s  wall 0.42 s
+ SCF   energy in the final basis set = -113.88485256
+ Total energy in the final basis set = -113.88485256
+================================================================================
+|                                                                              |
+|                                 A D C  M A N                                 |
+|                                                                              |
+ ------------------------------------------------------------------------------ 
+|                                                                              |
+| Components:                                                                  |
+|                                                                              |
+| - libvmm - 1.3-trunk                                                         |
+|   Authors:                                                                   |
+|   Evgeny Epifanovsky, Ilya Kaliman                                           |
+|                                                                              |
+| - libtensor - 2.5-trunk                                                      |
+|   Authors:                                                                   |
+|   Evgeny Epifanovsky, Michael Wormit, Dmitry Zuev, Sam Manzer,               |
+|   Ilya Kaliman                                                               |
+|                                                                              |
+| - libwfa - 1.1-trunk                                                         |
+|   Authors:                                                                   |
+|   Felix Plasser, Stefanie Mewes (Baeppler), Benjamin Thomitzni,              |
+|   Michael Wormit, Feng Chen, Anna I. Krylov, Pavel Pokhilko                  |
+|                                                                              |
+| - libadc - 1.1-trunk                                                         |
+|   Authors:                                                                   |
+|   Michael Wormit, Adrian L. Dempwolff, Philipp H. P. Harbach,                |
+|   Caroline Krauter, Dirk Rehn, Matthias Schneider, Jan Wenzel                |
+|                                                                              |
+| - adcman - 2.6-trunk                                                         |
+|   Authors:                                                                   |
+|   Michael Wormit, Adrian L. Dempwolff, Philipp H. P. Harbach,                |
+|   Caroline Krauter, Daniel Lefrancois, Jan-Michael Mewes, Dirk Rehn,         |
+|   Matthias Schneider, Jan Wenzel, Andreas Dreuw                              |
+|                                                                              |
+| Authors of earlier versions of ADCMAN:                                       |
+| Andreas Dreuw, Jan Hendrik Starcke, Dirk Rehn, Michael Wormit                |
+|                                                                              |
+================================================================================
+
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-20.589 -11.353  -1.409  -0.874  -0.694  -0.653  -0.536  -0.443
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    1 B2    2 B1                 
+ -- Virtual --                   
+  0.033   0.051   0.069   0.090   0.147   0.155   0.160   0.220
+  6 A1    3 B1    2 B2    7 A1    3 B2    4 B1    8 A1    9 A1                 
+  0.259   0.266   0.267   0.323   0.343   0.355   0.446   0.452
+ 10 A1    5 B1    4 B2   11 A1    1 A2    6 B1   12 A1    5 B2                 
+  0.468   0.512   0.552   0.556   0.595   0.618   0.645   0.685
+  7 B1   13 A1    8 B1   14 A1    2 A2    6 B2   15 A1    9 B1                 
+  0.753   0.843   0.898   0.992   1.057   1.212   1.216   1.228
+ 16 A1    7 B2   17 A1   10 B1   18 A1    3 A2   11 B1    8 B2                 
+  1.274   1.420   1.492   1.494   1.621   1.631   1.820   1.821
+ 19 A1   20 A1    4 A2   12 B1   21 A1    9 B2   10 B2   13 B1                 
+  1.949   1.961   2.080   2.146   2.189   2.221   2.382   2.552
+ 22 A1   14 B1   23 A1   11 B2   24 A1    5 A2   15 B1   25 A1                 
+  2.664   2.943   3.300   3.689   3.700   3.738   3.887   4.046
+ 26 A1   16 B1   27 A1    6 A2   28 A1   12 B2   17 B1   29 A1                 
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-20.589 -11.353  -1.409  -0.874  -0.694  -0.653  -0.536  -0.443
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    1 B2    2 B1                 
+ -- Virtual --                   
+  0.033   0.051   0.069   0.090   0.147   0.155   0.160   0.220
+  6 A1    3 B1    2 B2    7 A1    3 B2    4 B1    8 A1    9 A1                 
+  0.259   0.266   0.267   0.323   0.343   0.355   0.446   0.452
+ 10 A1    5 B1    4 B2   11 A1    1 A2    6 B1   12 A1    5 B2                 
+  0.468   0.512   0.552   0.556   0.595   0.618   0.645   0.685
+  7 B1   13 A1    8 B1   14 A1    2 A2    6 B2   15 A1    9 B1                 
+  0.753   0.843   0.898   0.992   1.057   1.212   1.216   1.228
+ 16 A1    7 B2   17 A1   10 B1   18 A1    3 A2   11 B1    8 B2                 
+  1.274   1.420   1.492   1.494   1.621   1.631   1.820   1.821
+ 19 A1   20 A1    4 A2   12 B1   21 A1    9 B2   10 B2   13 B1                 
+  1.949   1.961   2.080   2.146   2.189   2.221   2.382   2.552
+ 22 A1   14 B1   23 A1   11 B2   24 A1    5 A2   15 B1   25 A1                 
+  2.664   2.943   3.300   3.689   3.700   3.738   3.887   4.046
+ 26 A1   16 B1   27 A1    6 A2   28 A1   12 B2   17 B1   29 A1                 
+
+--------------------------------------------------------------------------------
+                                   HF Summary                                   
+--------------------------------------------------------------------------------
+  Energy:                                                 -113.8848525566 a.u.
+  Dip. moment [a.u.]:                  [   0.000000,   -0.000000,    1.136560]
+  Total dipole [Debye]:                                               2.888848
+  <r^2> [a.u.]:                        [  14.758926,    8.753740,   37.109892]
+  Total <r^2> [a.u.]:                                                60.622558
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                                 MP(2) Summary                                  
+--------------------------------------------------------------------------------
+  MP energy contribution:                                   -0.3388901219 a.u.
+  Total energy:                                           -114.2237426785 a.u.
+  Dip. moment [a.u.]:                  [   0.000000,   -0.000000,    0.890781]
+  Total dipole [Debye]:                                               2.264140
+  <r^2> [a.u.]:                        [  14.999121,    8.846611,   37.312093]
+  Total <r^2> [a.u.]:                                                61.157825
+--------------------------------------------------------------------------------
+  Starting Davidson for singlet states of irrep B1 ... 
+--------------------------------------------------------------------------------
+   It NVec Conv  Avg. Norm  Max. Norm  Conv. states           Remark
+--------------------------------------------------------------------------------
+         1    0  5.175e-01  5.175e-01  0.3984 n               Guess.
+    1    2    0  2.004e-01  2.004e-01  0.2550 n               
+    2    3    0  7.656e-02  7.656e-02  0.2306 n               
+    3    4    0  5.749e-02  5.749e-02  0.2236 n               
+    4    5    0  3.217e-02  3.217e-02  0.2206 n               
+    5    2    0  1.324e-02  1.324e-02  0.2201 n               Subspace collapsed.
+    6    3    0  1.054e-02  1.054e-02  0.2198 n               
+    7    4    0  5.152e-03  5.152e-03  0.2197 n               
+    8    5    0  2.597e-03  2.597e-03  0.2197 n               
+    9    2    0  1.451e-03  1.451e-03  0.2197 n               Subspace collapsed.
+   10    3    0  1.198e-03  1.198e-03  0.2197 n               
+   11    4    0  9.334e-04  9.334e-04  0.2197 n               
+   12    5    0  8.714e-04  8.714e-04  0.2197 n               
+   13    2    0  3.314e-04  3.314e-04  0.2197 n               Subspace collapsed.
+   14    3    0  2.744e-04  2.744e-04  0.2197 n               
+   15    4    0  1.870e-04  1.870e-04  0.2197 n               
+   16    5    0  1.761e-04  1.761e-04  0.2197 n               
+   17    2    0  9.482e-05  9.482e-05  0.2197 n               Subspace collapsed.
+   18    3    0  9.056e-05  9.056e-05  0.2197 n               
+   19    4    0  5.838e-05  5.838e-05  0.2197 n               
+   20    5    0  6.411e-05  6.411e-05  0.2197 n               
+   21    2    0  2.387e-05  2.387e-05  0.2197 n               Subspace collapsed.
+   22    3    0  2.076e-05  2.076e-05  0.2197 n               
+   23    4    0  1.323e-05  1.323e-05  0.2197 n               
+   24    5    0  1.315e-05  1.315e-05  0.2197 n               
+   25    2    0  7.413e-06  7.413e-06  0.2197 n               Subspace collapsed.
+   26    3    0  7.108e-06  7.108e-06  0.2197 n               
+   27    4    0  4.308e-06  4.308e-06  0.2197 n               
+   28    5    0  4.959e-06  4.959e-06  0.2197 n               
+   29    2    0  1.886e-06  1.886e-06  0.2197 n               Subspace collapsed.
+   30    3    0  1.697e-06  1.697e-06  0.2197 n               
+   31    4    0  1.028e-06  1.028e-06  0.2197 n               
+   32    5    0  1.038e-06  1.038e-06  0.2197 n               
+   33    2    1  6.015e-07  6.015e-07  0.2197 y               Converged.
+--------------------------------------------------------------------------------
+  Davidson Summary: 
+ ------------------------------------------------------------
+  State  0: excitation energy =   0.2197 a.u.   (converged)
+ ------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+                             Excited State Summary
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+  Excited state 1 (singlet, B1)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  1 (1) B1                                    R^2 =  6.01541e-07
+
+  Total energy:                                           -114.0040386396 a.u.
+  Excitation energy:                                               5.978451 eV
+
+  Osc. strength:                                                      0.016901
+  Trans. dip. moment [a.u.]:           [  -0.339689,    0.000000,    0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,   -0.000000,    0.000000]
+
+
+  V1^2 = 0.8847, V2^2 = 0.1153
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     2 (B1) A               6 (A1) A                 -0.5868
+     2 (B1) A               8 (A1) A                 -0.2533
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+  Time of ADC calculation:  CPU 60.79 s  wall 7.89 s
+================================================================================
+ 
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-20.589 -11.353  -1.409  -0.874  -0.694  -0.653  -0.536  -0.443
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    1 B2    2 B1                 
+ -- Virtual --                   
+  0.033   0.051   0.069   0.090   0.147   0.155   0.160   0.220
+  6 A1    3 B1    2 B2    7 A1    3 B2    4 B1    8 A1    9 A1                 
+  0.259   0.266   0.267   0.323   0.343   0.355   0.446   0.452
+ 10 A1    5 B1    4 B2   11 A1    1 A2    6 B1   12 A1    5 B2                 
+  0.468   0.512   0.552   0.556   0.595   0.618   0.645   0.685
+  7 B1   13 A1    8 B1   14 A1    2 A2    6 B2   15 A1    9 B1                 
+  0.753   0.843   0.898   0.992   1.057   1.212   1.216   1.228
+ 16 A1    7 B2   17 A1   10 B1   18 A1    3 A2   11 B1    8 B2                 
+  1.274   1.420   1.492   1.494   1.621   1.631   1.820   1.821
+ 19 A1   20 A1    4 A2   12 B1   21 A1    9 B2   10 B2   13 B1                 
+  1.949   1.961   2.080   2.146   2.189   2.221   2.382   2.552
+ 22 A1   14 B1   23 A1   11 B2   24 A1    5 A2   15 B1   25 A1                 
+  2.664   2.943   3.300   3.689   3.700   3.738   3.887   4.046
+ 26 A1   16 B1   27 A1    6 A2   28 A1   12 B2   17 B1   29 A1                 
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-20.589 -11.353  -1.409  -0.874  -0.694  -0.653  -0.536  -0.443
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    1 B2    2 B1                 
+ -- Virtual --                   
+  0.033   0.051   0.069   0.090   0.147   0.155   0.160   0.220
+  6 A1    3 B1    2 B2    7 A1    3 B2    4 B1    8 A1    9 A1                 
+  0.259   0.266   0.267   0.323   0.343   0.355   0.446   0.452
+ 10 A1    5 B1    4 B2   11 A1    1 A2    6 B1   12 A1    5 B2                 
+  0.468   0.512   0.552   0.556   0.595   0.618   0.645   0.685
+  7 B1   13 A1    8 B1   14 A1    2 A2    6 B2   15 A1    9 B1                 
+  0.753   0.843   0.898   0.992   1.057   1.212   1.216   1.228
+ 16 A1    7 B2   17 A1   10 B1   18 A1    3 A2   11 B1    8 B2                 
+  1.274   1.420   1.492   1.494   1.621   1.631   1.820   1.821
+ 19 A1   20 A1    4 A2   12 B1   21 A1    9 B2   10 B2   13 B1                 
+  1.949   1.961   2.080   2.146   2.189   2.221   2.382   2.552
+ 22 A1   14 B1   23 A1   11 B2   24 A1    5 A2   15 B1   25 A1                 
+  2.664   2.943   3.300   3.689   3.700   3.738   3.887   4.046
+ 26 A1   16 B1   27 A1    6 A2   28 A1   12 B2   17 B1   29 A1                 
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                     0.737376
+      2 H                    -0.098052
+      3 H                    -0.098052
+      4 O                    -0.541272
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y      -0.0000      Z       2.8888
+       Tot       2.8888
+    Quadrupole Moments (Debye-Ang)
+        XX     -11.4644     XY       0.0000     YY     -11.7741
+        XZ       0.0000     YZ       0.0000     ZZ     -12.1639
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY      -0.0000    XYY      -0.0000
+       YYY      -0.0000    XXZ       0.9373    XYZ      -0.0000
+       YYZ      -0.3627    XZZ      -0.0000    YZZ      -0.0000
+       ZZZ       0.1218
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -17.3294   XXXY       0.0000   XXYY      -5.0211
+      XYYY       0.0000   YYYY     -10.6148   XXXZ      -0.0000
+      XXYZ      -0.0000   XYYZ      -0.0000   YYYZ       0.0000
+      XXZZ     -10.0097   XYZZ       0.0000   YYZZ      -9.3794
+      XZZZ      -0.0000   YZZZ       0.0000   ZZZZ     -45.7355
+ -----------------------------------------------------------------
+Archival summary:
+1\1\Knecht19\SP\HF\BasisUnspecified\112\mscheure\MonApr2009:31:572020MonApr2009:31:572020\0\\#,HF,BasisUnspecified,\\0,1\C\H,1,1.10046\H,1,1.10046,2,116.222\O,1,1.21043,2,121.889,3,-180,0\\HF=-113.884853\\@
+
+ Total job time:  56.85s(wall), 117.43s(cpu) 
+ Mon Apr 20 09:31:57 2020
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
